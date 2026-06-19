@@ -1,0 +1,17 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import sklearn
+import pickle
+
+# BMI Calculator
+weight = float(input("Bitte gibt deine Gewicht in KG an: ").replace(",", "."))
+größe = float(input("Bitte gibt dein Größe in Meter an: ").replace(",", "."))
+BMI = weight / (größe**2)
+if BMI < 18.5:
+    print("Du bist Untergewichtig")
+elif BMI >= 18.5 and BMI < 25:
+    print("Du hast Normalgewicht")
+else:
+    print(f"dein BMI ist: {round(BMI, 2)}")
+    print("Du bist Übergewichtig")
