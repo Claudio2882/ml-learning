@@ -5,13 +5,13 @@ import sklearn
 import pickle
 
 # BMI Calculator
-weight = float(input("Bitte gibt deine Gewicht in KG an: ").replace(",", "."))
-größe = float(input("Bitte gibt dein Größe in Meter an: ").replace(",", "."))
-BMI = weight / (größe**2)
+weight = float(input("Enter your weight in kg: ").replace(",", "."))
+height = float(input("Enter your height in meters: ").replace(",", "."))
+BMI = weight / (height**2)
+print(f"Your BMI is: {round(BMI, 2)}")
 if BMI < 18.5:
-    print("Du bist Untergewichtig")
+    print("You are underweight")
 elif BMI >= 18.5 and BMI < 25:
-    print("Du hast Normalgewicht")
+    print("you are normal weight")
 else:
-    print(f"dein BMI ist: {round(BMI, 2)}")
-    print("Du bist Übergewichtig")
+    print("You are overweight")
