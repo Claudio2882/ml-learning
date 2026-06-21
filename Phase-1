@@ -16,7 +16,7 @@ elif BMI >= 18.5 and BMI < 25:
 else:
     print("You are overweight")
 
-
+#Max Hr Calculator
 age = int(input("Enter your age: "))
 max_hr = 220 - age
 lower = [0.50, 0.60, 0.70, 0.80, 0.90]
@@ -25,3 +25,15 @@ for zone in range(1, 6):
 low_bpm = round(max_hr * lower[zone - 1])
 high_bpm = round(max_hr * upper[zone - 1])
 print(f"Zone {zone}: {low_bpm} - {high_bpm} BPM")
+
+#Max Hr Calculator with function
+age = int(input("Enter your age: "))
+def berechne_zonen(age):
+    max_hr = 220 - age
+    lower = [0.50, 0.60, 0.70, 0.80, 0.90]
+    upper = [0.60, 0.70, 0.80, 0.90, 1.00]
+    for zone in range(1, 6):
+        low_bpm = round(max_hr * lower[zone - 1])
+        high_bpm = round(max_hr * upper[zone - 1])
+        print(f"Zone {zone}: {low_bpm} - {high_bpm} BPM")
+berechne_zonen(age)
