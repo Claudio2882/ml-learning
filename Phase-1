@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import sklearn
 import pickle
 
-# BMI Calculator
+# BMI Calculator (Day 1)
 weight = float(input("Enter your weight in kg: ").replace(",", "."))
 height = float(input("Enter your height in meters: ").replace(",", "."))
 BMI = weight / (height**2)
@@ -16,7 +16,7 @@ elif BMI >= 18.5 and BMI < 25:
 else:
     print("You are overweight")
 
-#Max Hr Calculator
+#Max Hr Calculator (Day 2)
 age = int(input("Enter your age: "))
 max_hr = 220 - age
 lower = [0.50, 0.60, 0.70, 0.80, 0.90]
@@ -26,7 +26,7 @@ low_bpm = round(max_hr * lower[zone - 1])
 high_bpm = round(max_hr * upper[zone - 1])
 print(f"Zone {zone}: {low_bpm} - {high_bpm} BPM")
 
-#Max Hr Calculator with function
+#Max Hr Calculator with function (Day 3)
 age = int(input("Enter your age: "))
 def berechne_zonen(age):
     max_hr = 220 - age
