@@ -37,3 +37,15 @@ def berechne_zonen(age):
         high_bpm = round(max_hr * upper[zone - 1])
         print(f"Zone {zone}: {low_bpm} - {high_bpm} BPM")
 berechne_zonen(age)
+
+#Dictionary with for loop (Day 4)
+supplement = [
+{"name": "Vitamin_D", "dosis": "5000iu", "timing": "in the mornung with breakfast which contains at least 15g of fat"},
+{"name": "Magnesium", "dosis": "400mg", "timing": "1 hour before bed"},
+{"name": "Glycine", "dosis": "3g", "timing": "1 hour before bed"},
+{"name": "caffeine", "dosis": "150mg", "timing": "45 minutes before workout ", "frequency": "4 times per week"},
+{"name": "nicotine", "dosis": "2mg", "timing": "30 minutes before studying ", "frequency": "3 times per week"},
+{"name": "Minoxidil Oral", "dosis": "5mg"}
+]
+for s in supplement:
+    print(f"{s['name']} - {s['dosis']} - {s.get('timing', 'no specific timing')} - {s.get('frequency', 'everyday')}")
