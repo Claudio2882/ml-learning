@@ -49,3 +49,31 @@ supplement = [
 ]
 for s in supplement:
     print(f"{s['name']} - {s['dosis']} - {s.get('timing', 'no specific timing')} - {s.get('frequency', 'everyday')}")
+
+#CSV (Day 5)
+#training.csv
+#date,weight,calories,sleep_hours
+#2026-06-01,82.5,2500,7
+#2026-06-02,82.7,2400,8
+#2026-06-03,83,2300,  9
+#2026-06-04,83.5,2200,7
+#2026-06-05,84.2,2100,8
+#2026-06-06,83.5,2000,7
+
+total_calories = 0
+total_weight = 0
+total_sleep_hours = 0
+count = 0
+
+with open("training.csv") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        total_calories += float(row['calories'])
+        total_weight += float(row['weight'])
+        total_sleep_hours += float(row['sleep_hours'])
+        count += 1
+
+print(f"Average calories: {round(total_calories / count, 1)}")
+print(f"Average weight: {round(total_weight / count, 1)}")
+print(f"Average sleep hours: {round(total_sleep_hours / count, 1)}")
+print(f"Total days: {count}")
