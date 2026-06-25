@@ -68,3 +68,28 @@ print(f"Average calories: {round(total_calories / count, 1)}")
 print(f"Average weight: {round(total_weight / count, 1)}")
 print(f"Average sleep hours: {round(total_sleep_hours / count, 1)}")
 print(f"Total days: {count}")
+
+#OOP (Day 6)
+class Athlet:
+    def __init__(self, name, weight, age, height):
+        self.name = name
+        self.weight = weight
+        self.age = age
+        self.height = height
+
+    def bmi(self):
+        return round(self.weight / (self.height ** 2), 2)
+
+claudio = Athlet("Claudio", 82.5, 18, 1.80)
+print(claudio.name)
+print(claudio.weight)
+print(claudio.age)
+print(f"{claudio.height:.2f}")
+print(f"{claudio.bmi():.2f}")
+
+#NumPy Array (Day 7)
+gewicht = np.array([82.5, 82.8, 83, 84.1, 83.0, 83, 82.1, 83])
+print(f"Std: {np.std(gewicht):.2f}")
+print(f"Avg: {np.mean(gewicht):.2f}")
+print(f"Max: {np.max(gewicht):.2f}")
+print(f"Min: {np.min(gewicht):.2f}")
