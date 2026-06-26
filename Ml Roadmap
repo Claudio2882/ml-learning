@@ -1,0 +1,324 @@
+# ML Lernplan — Claudio Sorrentino
+**Ziel:** Werkstudent Data Science bei Evotec SE nach Jahr 1 CIS (Uni Hamburg)  
+**Endziel:** ML/AI Forschung in Biotech/Longevity  
+**Startdatum:** ~20. Juni 2026  
+**Dauer:** 16 Wochen (4 Phasen)
+
+---
+
+## WIE MAN DIESEN PLAN IN NEUEN CHATS NUTZT
+
+Kopiere diesen Block ganz oben in jeden neuen Chat:
+
+```
+Ich bin Claudio, 18, Hamburg. Ich lerne ML nach einem strukturierten 16-Wochen-Plan.
+Mein Ziel: Werkstudent bei Evotec SE (Biotech, Drug Discovery mit AI/ML).
+Ich studiere ab Herbst CIS an der Uni Hamburg.
+Aktuell: Phase [X], Woche [X], Tag [X] — Thema: [Thema eintragen]
+Ich möchte heute [Thema] durcharbeiten. Erkläre mir das, stelle Fragen, prüfe mein Verständnis.
+```
+
+---
+
+## GESAMTÜBERBLICK
+
+| Phase | Wochen | Inhalt |
+|-------|--------|--------|
+| 1 | 1–4 | Python + Mathe Grundlagen |
+| 2 | 5–8 | Core ML Algorithmen |
+| 3 | 9–12 | Deep Learning + Neural Networks |
+| 4 | 13–16 | Biotech ML + End-to-End Projekt |
+
+**Tagesstruktur:**  
+- Schule läuft noch (bis ~9. Juli): 1–1.5 Std/Tag  
+- Sommerferien ab 9. Juli: 2–3 Std/Tag  
+- 6 Tage pro Woche, 1 Ruhetag (Sonntag)
+
+**Ressourcen (kostenlos):**
+- YouTube Full Course (dein aktueller Kurs)
+- fast.ai — praktisch, Python-basiert
+- Khan Academy — Mathe wenn nötig
+- scikit-learn Dokumentation
+- PyTorch Tutorials (ab Phase 3)
+- ChEMBL Datenbank (ab Phase 4)
+
+**Täglich parallel (Wochen 1–4):**
+- 3Blue1Brown "Essence of Linear Algebra" — 20 Min täglich nach dem Code-Tag, vor der Wiederholungsaufgabe. Nicht optional.
+
+---
+
+## PHASE 1 — Python & Mathe (Wochen 1–4)
+
+**Ziel dieser Phase:** Solide Grundlage in Python und der Mathe hinter ML. Kein Überspringen — ohne das funktioniert Phase 2 nicht.
+
+---
+
+### WOCHE 1 — Python Grundlagen
+
+**Wochenziel:** Python sicher genug beherrschen, um Daten zu laden, zu manipulieren und einfache Funktionen zu schreiben.
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Variables, Data Types, Operators | Schreibe ein Skript das Körperdaten (Gewicht, Größe, BMI) berechnet und ausgibt |
+| Di | Loops (for, while) + Conditionals | Schreibe eine Schleife die für jede Herzfrequenzzone (Zone 1–5) die BPM-Grenzen berechnet |
+| Mi | Functions + Scope | Extrahiere deine BMI-Berechnung in eine saubere Funktion mit Parametern |
+| Do | Data Structures: Lists & Dicts | Erstelle ein Dictionary mit 5 Supplements, ihren Dosierungen und Timings |
+| Fr | File Handling: CSV lesen/schreiben | Lade eine CSV-Datei mit Dummy-Trainingsdaten (Datum, Gewicht, Kalorien) und gib sie aus |
+| Sa | OOP Basics: Classes & Methods | Baue eine Klasse `Athlet` mit Attributen und einer Methode die den TDEE berechnet |
+
+---
+
+### WOCHE 2 — NumPy & Pandas
+
+**Wochenziel:** Mit echten Datentabellen arbeiten können — laden, filtern, transformieren.
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | NumPy: Arrays, Operationen | Erstelle ein Array mit 30 Gewichtsmessungen, berechne Mean, Std, Min, Max |
+| Di | NumPy: Matrix-Operationen | Multipliziere zwei kleine Matrizen von Hand, dann mit NumPy — vergleiche |
+| Mi | Pandas: DataFrames laden | Lade einen öffentlichen Datensatz (z.B. Iris oder Titanic von Kaggle) |
+| Do | Pandas: Filtern, Sortieren, Groupby | Beantworte 5 konkrete Fragen über deinen Datensatz nur mit Pandas |
+| Fr | Pandas: Fehlende Werte, Datentypen | Bereinige deinen Datensatz: fehlende Werte behandeln, Spaltentypen korrigieren |
+| Sa | Matplotlib: Erste Plots | Plotte Gewichtsverlauf über Zeit (Liniendiagramm) und eine Häufigkeitsverteilung |
+
+---
+
+### WOCHE 3 — Mathe Teil 1: Linear Algebra & Statistik
+
+**Wochenziel:** Vektoren, Matrizen und Wahrscheinlichkeit so verstehen, dass man ML-Formeln lesen kann.
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Vektoren: Was sie sind, Operationen | Repräsentiere ein Molekül als Vektor von 5 Eigenschaften, berechne Euklidische Distanz zu einem anderen |
+| Di | Matrizen: Multiplikation, Transpose | Berechne eine 3×3 Matrix-Multiplikation von Hand, dann mit NumPy |
+| Mi | Dot Product & Ähnlichkeit | Berechne Cosine Similarity zwischen zwei Vektoren — erkläre wann das nützlich ist |
+| Do | Wahrscheinlichkeit: Grundlagen, Verteilungen | Erkläre Normal-, Binomial- und Poisson-Verteilung in eigenen Worten mit je einem Beispiel |
+| Fr | Bayes Theorem | Rechne das klassische Krankheitstest-Beispiel durch — vollständig, mit Zahlen |
+| Sa | Mean, Varianz, Standardabweichung | Berechne alles für deinen Gewichtsdatensatz von Hand, dann mit NumPy — vergleiche |
+
+---
+
+### WOCHE 4 — Mathe Teil 2: Calculus & Optimierung
+
+**Wochenziel:** Verstehen was eine Ableitung ist, warum Gradient Descent funktioniert — das Herzstück von ML.
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Was ist eine Ableitung? | Erkläre die Ableitung von f(x) = x² in eigenen Worten. Wann ist sie 0 und was bedeutet das? |
+| Di | Partielle Ableitungen | Leite f(x,y) = x² + 3y partiell nach x und y ab |
+| Mi | Was ist ein Gradient? | Beschreibe mit einer Analogie (Berg, Tal) was der Gradient einer Funktion aussagt |
+| Do | Gradient Descent: Konzept | Implementiere Gradient Descent von Hand für f(x) = x² — finde das Minimum |
+| Fr | Learning Rate: Was passiert bei zu groß/klein | Teste deine Implementierung mit 3 verschiedenen Learning Rates, plotte die Konvergenz |
+| Sa | Wiederholung Phase 1 | Erkläre einem Freund (oder Claude) alle Konzepte der letzten 4 Wochen in einfachen Worten |
+
+---
+
+## PHASE 2 — Core ML Algorithmen (Wochen 5–8)
+
+**Ziel:** Klassische ML-Algorithmen verstehen, implementieren und evaluieren — nicht nur benutzen.
+
+---
+
+### WOCHE 5 — Supervised Learning: Regression
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Was ist Supervised Learning? | Erkläre den Unterschied zwischen Regression und Klassifikation mit je einem Biotech-Beispiel |
+| Di | Linear Regression: Theorie | Erkläre die Cost Function (MSE) und warum wir sie minimieren |
+| Mi | Linear Regression: Implementierung | Implementiere lineare Regression mit NumPy (ohne scikit-learn) |
+| Do | Linear Regression: scikit-learn | Lade den California Housing Datensatz, trainiere ein Modell, evaluiere mit R² und MSE |
+| Fr | Overfitting vs. Underfitting | Demonstriere beide Probleme mit Polynomregression, plotte die Ergebnisse |
+| Sa | Regularisierung: Ridge & Lasso | Erkläre warum Regularisierung hilft — implementiere Ridge auf deinem Modell |
+
+---
+
+### WOCHE 6 — Supervised Learning: Klassifikation
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Logistic Regression: Theorie | Erkläre die Sigmoid-Funktion — warum gibt sie Werte zwischen 0 und 1 aus? |
+| Di | Logistic Regression: Implementierung | Klassifiziere den Iris-Datensatz, berechne Accuracy, Precision, Recall |
+| Mi | Decision Trees | Baue einen Decision Tree für ein Bioaktivitätsproblem (aktiv/inaktiv), visualisiere ihn |
+| Do | Random Forests | Erkläre warum Random Forests besser als einzelne Decision Trees sind — Bagging-Konzept |
+| Fr | SVM | Erkläre Support Vector Machines mit eigenen Worten. Wann benutzt man sie? |
+| Sa | Modellvergleich | Vergleiche alle Algorithmen dieser Woche auf demselben Datensatz — welcher gewinnt und warum? |
+
+---
+
+### WOCHE 7 — Unsupervised Learning & Feature Engineering
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | K-Means Clustering: Theorie | Erkläre den Algorithmus Schritt für Schritt ohne Formeln |
+| Di | K-Means: Implementierung | Clustere einen Datensatz mit 3 Gruppen, visualisiere mit Matplotlib |
+| Mi | PCA: Theorie | Erkläre Dimensionsreduktion — warum ist das in Bioinformatik wichtig? |
+| Do | PCA: Implementierung | Reduziere den Iris-Datensatz auf 2 Dimensionen, plotte die Cluster |
+| Fr | Feature Engineering | Erstelle neue Features aus bestehenden Daten — erkläre warum das oft mehr bringt als ein besserer Algorithmus |
+| Sa | Feature Selection | Erkläre 3 Methoden zur Feature Selection — implementiere eine |
+
+---
+
+### WOCHE 8 — Modell-Evaluation & ML Pipeline
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Train/Validation/Test Split | Erkläre warum 3 Splits nötig sind — nicht nur 2 |
+| Di | Cross-Validation | Implementiere k-fold Cross-Validation, erkläre warum sie stabiler ist |
+| Mi | Confusion Matrix, ROC, AUC | Berechne und interpretiere alle Metriken für ein Klassifikationsproblem |
+| Do | Hyperparameter Tuning: Grid Search | Optimiere einen Random Forest mit GridSearchCV |
+| Fr | Scikit-learn Pipelines + Pickle | Baue eine vollständige Pipeline: Preprocessing → Training → Evaluation. Speichere das trainierte Modell mit Pickle ab und lade es wieder. |
+| Sa | Projekt Phase 2 | UCI Heart Disease Dataset — vollständige Pipeline: laden → preprocessing → Random Forest → Evaluation → Modell mit Pickle speichern |
+
+---
+
+## PHASE 3 — Deep Learning & Neural Networks (Wochen 9–12)
+
+**Ziel:** Neural Networks von Grund auf verstehen, PyTorch beherrschen, erste echte Modelle bauen.
+
+---
+
+### WOCHE 9 — Neural Networks: Theorie
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Was ist ein Neuron? | Erkläre das McCulloch-Pitts-Modell und wie es mit dem biologischen Neuron verwandt ist |
+| Di | Activation Functions | Erkläre ReLU, Sigmoid, Tanh — wann benutzt man welche und warum? |
+| Mi | Forward Pass | Berechne den Forward Pass eines 2-Layer-Netzwerks von Hand mit Beispielzahlen |
+| Do | Loss Functions | Erkläre MSE vs. Cross-Entropy — wann nimmt man welche? |
+| Fr | Backpropagation: Konzept | Erkläre Backpropagation ohne Formeln — nur Intuition und Fluss |
+| Sa | Backpropagation: Mathe | Leite den Gradienten für ein einfaches 1-Layer-Netz vollständig her |
+
+---
+
+### WOCHE 10 — PyTorch Grundlagen
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | PyTorch Tensors | Erstelle, manipuliere und operiere auf Tensoren — vergleiche mit NumPy Arrays |
+| Di | Autograd | Erkläre was Autograd macht — berechne Gradienten automatisch für f(x) = x³ |
+| Mi | nn.Module: erstes Netz | Baue ein einfaches feedforward Netz mit PyTorch für das XOR-Problem |
+| Do | Training Loop | Schreibe den vollständigen Training Loop: forward → loss → backward → optimizer.step() |
+| Fr | DataLoader & Dataset | Lade den MNIST-Datensatz mit PyTorch DataLoader, visualisiere 10 Beispiele |
+| Sa | Vollständiges MLP auf MNIST | Trainiere ein MLP auf MNIST, erreiche >95% Accuracy |
+
+---
+
+### WOCHE 11 — CNNs & Sequenzmodelle
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | CNNs: Convolution, Pooling | Erkläre was ein Convolutional Layer macht — mit einer handgezeichneten Skizze |
+| Di | CNN auf MNIST | Baue einen CNN, vergleiche Accuracy mit dem MLP von letzter Woche |
+| Mi | RNNs: Konzept | Erkläre warum RNNs für Sequenzdaten geeignet sind — Beispiel: Proteinsequenzen |
+| Do | LSTMs | Erkläre das Vergessen-Gate — warum löst LSTM das Vanishing Gradient Problem? |
+| Fr | Transformers: Attention Mechanismus | Erkläre Self-Attention in eigenen Worten — warum ist das so mächtig? |
+| Sa | Transformers: Architektur | Skizziere die vollständige Transformer-Architektur und erkläre jeden Block |
+
+---
+
+### WOCHE 12 — Transfer Learning & Hugging Face
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Was ist Transfer Learning? | Erkläre Pretrained Models — warum trainiert man nicht von Grund auf? |
+| Di | Hugging Face: Einführung | Lade ein vortrainiertes Modell von Hugging Face, mache Inference |
+| Mi | Fine-tuning: Konzept | Erkläre den Unterschied zwischen Feature Extraction und Fine-tuning |
+| Do | Fine-tuning: Implementierung | Fine-tune ein kleines Modell auf einem eigenen Datensatz |
+| Fr | Weights & Biases | Verbinde ein Training mit W&B, logge Loss-Kurven und Metriken |
+| Sa | Wiederholung Phase 3 | Erkläre alle Konzepte aus Phase 3 von Anfang bis Ende ohne Notizen |
+
+---
+
+## PHASE 4 — Biotech ML + End-to-End Projekt (Wochen 13–16)
+
+**Ziel:** ML direkt auf Biotech und Drug Discovery anwenden. Finales Projekt das Evotec-relevant ist.
+
+---
+
+### WOCHE 13 — ML in der Bioinformatik
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Molekulare Daten: SMILES Format | Was ist SMILES? Schreibe die SMILES-Repräsentation von Aspirin, erkläre jeden Teil |
+| Di | RDKit Einführung | Installiere RDKit, lade ein Molekül, berechne molekulare Fingerprints |
+| Mi | Molecular Fingerprints | Erkläre was Morgan Fingerprints sind — wie repräsentieren sie ein Molekül als Vektor? |
+| Do | BioPython Einführung | Lade eine Proteinsequenz aus UniProt, analysiere Aminosäurezusammensetzung |
+| Fr | ChEMBL Datenbank | Lade Bioaktivitätsdaten für ein Target deiner Wahl aus ChEMBL |
+| Sa | Graph Neural Networks: Konzept | Erkläre warum Moleküle als Graphen modelliert werden — Nodes und Edges |
+
+---
+
+### WOCHE 14 — Drug Discovery ML
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | QSAR Modellierung: Konzept | Was ist QSAR? Wie wird ML für Aktivitätsvorhersage benutzt? |
+| Di | QSAR: Implementierung | Trainiere ein Random Forest Modell auf ChEMBL-Daten um IC50 vorherzusagen |
+| Mi | Molecular Generation: Konzept | Erkläre wie Variational Autoencoders neue Moleküle generieren können |
+| Do | AlphaFold: Was hat es verändert? | Erkläre das Proteinstrukturdatenproblem das AlphaFold gelöst hat |
+| Fr | Datenpipeline für biologische Daten | Baue eine Pipeline: ChEMBL API → Daten laden → Fingerprints berechnen → Modell trainieren |
+| Sa | Literatur: Evotec AI Paper | Lies die Evotec 2025 AI/ML Publication (Pitt et al.) — fasse die 3 wichtigsten Punkte zusammen |
+
+---
+
+### WOCHE 15 — MLOps & Deployment
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Git für ML: Best Practices | Erstelle ein sauberes GitHub Repository mit README, .gitignore, Ordnerstruktur |
+| Di | MLflow: Experiment Tracking | Verbinde dein QSAR-Modell mit MLflow, vergleiche 3 verschiedene Modellläufe |
+| Mi | Docker: Grundlagen | Erstelle ein Dockerfile für dein Modell — erkläre was Docker macht und warum |
+| Do | FastAPI: Model Serving | Baue eine einfache API die Molekül-SMILES annimmt und Aktivität vorhersagt |
+| Fr | Monitoring: Data Drift | Erkläre was Data Drift ist — warum ist das in Biotech besonders kritisch? |
+| Sa | CI/CD Konzept | Erkläre was CI/CD für ein ML-Projekt bedeutet — theoretisch reicht hier |
+
+---
+
+### WOCHE 16 — End-to-End Projekt
+
+**Projektidee:** Bioaktivitäts-Klassifikator für ein konkretes Drug Target aus ChEMBL  
+*(z.B. SARS-CoV-2 Hauptprotease oder ein Longevity-relevantes Target wie mTOR)*
+
+| Tag | Thema | Aufgabe |
+|-----|-------|---------|
+| Mo | Projektplanung | Definiere Problem, Target, Datensatz, Metriken, Ziel — schreibe alles auf |
+| Di | Datensammlung & Cleaning | ChEMBL API, Duplikate entfernen, Aktivitätslabels standardisieren |
+| Mi | Feature Engineering | Molecular Fingerprints berechnen, zusätzliche physikochemische Deskriptoren |
+| Do | Modell Training & Tuning | Random Forest vs. GNN — Cross-Validation, Hyperparameter Tuning |
+| Fr | Evaluation & Interpretation | ROC-AUC, Confusion Matrix, wichtigste Features — was sagt das Modell aus? |
+| Sa | GitHub + README + Abschluss | Sauberes Repository, klares README mit Motivation und Ergebnissen, auf LinkedIn posten |
+
+---
+
+## FORTSCHRITTS-TRACKER
+
+**Aktueller Stand:** Phase 1, Woche 1, Tag 1
+
+Trage hier täglich ein:
+- Phase: ___
+- Woche: ___
+- Tag: ___
+- Thema heute: ___
+- Was war unklar: ___
+- Mini-Aufgabe erledigt: Ja / Nein
+
+---
+
+## WICHTIGE REGELN
+
+1. Kein Tag überspringen ohne den Stoff nachzuholen
+2. Jede Mini-Aufgabe wirklich ausführen — nicht nur lesen
+3. Code auf GitHub hochladen, auch wenn er unfertig ist
+4. Wenn etwas unklar ist: Claude fragen, nicht weitermachen
+5. Kein Vergleich mit anderen — dein Tempo, dein Plan
+6. Nach jedem Tag: eine kleine Wiederholungsaufgabe aus dem Kopf in einem leeren File — kein Autocomplete, kein Nachschauen
+
+---
+
+## NACH DEM PLAN
+
+Nach Woche 16 hast du:
+- Solide Python + ML + Deep Learning Grundlage
+- Spezifisches Wissen in Biotech ML / Drug Discovery
+- Ein GitHub Portfolio mit echten Projekten
+- Basis für die Werkstudentenbewerbung bei Evotec nach Jahr 1 CIS
