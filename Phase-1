@@ -93,3 +93,18 @@ print(f"Std: {np.std(gewicht):.2f}")
 print(f"Avg: {np.mean(gewicht):.2f}")
 print(f"Max: {np.max(gewicht):.2f}")
 print(f"Min: {np.min(gewicht):.2f}")
+
+#Matrix Operations (Day 8)
+m = np.array([[1, 2, 3],
+             [4, 5, 6]])
+print(m)
+print(m.shape)
+n = np.array([[3, 4],
+              [2,9],
+              [5, 7]])
+print(n)
+print(n.shape)
+ergebnis = np.dot(m, n)
+print(ergebnis)
+print(m.T)
+print(m.T.shape)
